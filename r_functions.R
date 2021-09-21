@@ -106,10 +106,10 @@ table(vect)
 vect
 -10   9  10  11  14  33 
   1   2   1   1   1   1 
-""
+"
 
 # 21) print: returns a short preview
-"print(vect)
+print(vect)
 
 # 22) savehistory: Save our history data
 "savehistory("nombre_que_quieras.R")
