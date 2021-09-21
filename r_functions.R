@@ -1,4 +1,4 @@
-vect = c(10, -10, 11, 9, 14, 33, 9)
+vect = c(12, -10, 11, 9, 14, 33, 9)
 num.sample = rnorm(100, 7, 3)
 
 # 1) getwd: Gets the current working directory
