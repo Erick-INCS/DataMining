@@ -16,3 +16,15 @@ print(paste(
 plot(n.sample)
 abline(h=1, col="green")
 abline(h=-1, col="green")
+
+###########
+size <- 100000
+counter <- 0
+for (i in rnorm(size)){
+  if (i > -1 & i <1){
+    counter <- counter +1
+  }
+}
+
+result <- (counter/size)
+print(result)
