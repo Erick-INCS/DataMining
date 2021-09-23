@@ -107,3 +107,33 @@ vect
 -10   9  10  11  14  33 
   1   2   1   1   1   1 
 "
+
+# 21) print: returns a short preview
+print(vect)
+
+# 22) savehistory: Save our history data
+"savehistory("nombre_que_quieras.R")
+
+# 23) df.residual: Returns the residual degrees-of-freedom extracted from a fitted model object.
+df.residual(object, .)
+
+# 24) coef: Extracts model coefficients from objects returned by modeling functions.
+coef(object, .)
+coef(object, complete = TRUE, .)
+
+# 25) residuals: extracts model residuals from objects returned by modeling functions.
+residuals(object, .)
+resid(object, .)
+
+# 26) deviance: Returns the deviance of a fitted model object.
+deviance(object, .)
+
+# 27) fitted: extracts fitted values from objects returned by modeling functions.  
+fitted(object, .)
+fitted.values(object, .)
+
+# 28) logLik: This function is generic; method functions can be written to handle specific classes of objects. 
+logLik(object, .)
+
+# 29) AIC: Generic function calculating Akaike's 'An Information Criterion' for one or several fitted model objects for which a log-likelihood value can be obtained
+AIC(object, ., k = 2)

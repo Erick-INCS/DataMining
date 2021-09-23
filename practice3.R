@@ -106,6 +106,4 @@ M <- rbind(
 )
 
 #Print The Matrix
-cols = unlist(lapply(1:12, FUN=as.character))
-cols
-heatmap(M, revR=F)
+M
