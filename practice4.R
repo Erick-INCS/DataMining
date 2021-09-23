@@ -115,14 +115,8 @@ colnames(FieldGoals) <- Seasons
 rownames(FieldGoals) <- Players
 
 
-
-
-
-
-
 ### Values & Plot 1 ###
 #Notice how Chris Paul gets few attempts per game <- Según la gráfica de nuestra práctica no es Chris Paul sino Joe Jhonson quien tiene pocos intentos de tiro por juego.
-
 
 plot <- function(data, rows){
   Data <- data[rows,,drop=F]
@@ -130,24 +124,15 @@ plot <- function(data, rows){
   legend("bottomleft", legend= Players[rows], inset= 0.01, pch= 15:18, col= c(1:4,6), horiz= F )
 }
 plot(Player_FTA)
-plot(Player_FTA/Games) #Plot1 Free Trows Attempts per game
-
-
-
+plot(Player_FTA/Games) 
 
 ### Values & Plot 2 ###
 #And yet Chris Paul's accuracy is one of the highest <- Confirmamos observando la gráfica de precisión.
 #Chances are his team would get more points if he had more FTA's <- Asumiendo que su precisión siga intacta, esto podría ser verdadero.
 #Also notice that Dwight Howard's FT Accuracy is extremely poor compared to other players. <- Se puede observar en el gráfico, siendo Dwight Howard el de menor precisión (línea rosa con cuadritos).
 
-
-plot <- function(data, rows){
-  Data <- data[rows,,drop=F]
-  matplot(t(Data), type = "b", pch = 15:18, col = c(1:4,6))
-  legend("bottomleft", legend= Players[rows], inset= 0.01, pch= 15:18, col= c(1:4,6), horiz= F )
-}
 plot(Player_FTA)
-plot(Player_FT/Player_FTA) #Plot2 Accuracy of Free Throws
+plot(Player_FT/Player_FTA) 
 
 ### Values & Plot 3 ###
 Because we have excluded free throws, this plot now shows us
@@ -173,12 +158,5 @@ probably why Dwight Howard's Free Throw Accuracy is poor.
 Estas observaciones parecen ser correctas acorde a las gráficas que podemos observar a continuación. Según los resultados obtenidos podríamos asumir que, en el caso de Dwight Howard, parece preferir acercarse al aro para anotar en lugar de tirar a distancia.
 '
 
-plot <- function(data, rows){
-        Data <- data[rows,,drop=F]
-        matplot(t(Data), type = "b", pch = 15:18, col = c(1:4,6))
-        legend("bottomleft", legend= Players[rows], inset= 0.01, pch= 15:18, col= c(1:4,6), horiz= F )
-}
 plot(Player_FTA)
-
-plot((Points - Player_FT) / FieldGoals) #Plot3 Player playing style (2 vs 3 points preference) excluding Free Throws
-
+plot((Points - Player_FT) / FieldGoals)
