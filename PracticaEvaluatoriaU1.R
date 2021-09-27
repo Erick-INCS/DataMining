@@ -5,22 +5,21 @@ Country_Code <- c("ABW","AFG","AGO","ALB","ARE","ARG","ARM","ATG","AUS","AUT","A
 
 #(c) Kirill Eremenko, www.superdatascience.com
 
-
+#importar csv
 datasheet <- read.csv(file.choose())
-
 
 install.packages("ggplot2")
 library(ggplot2)
 
-
+#creacion de data frame
 DFInfo <- data.frame(Country= Country_Code, LifeE1960 = Life_Expectancy_At_Birth_1960, LifeE2013 = Life_Expectancy_At_Birth_2013)
 
-
+#filtro por años
 data60s <- datasheet$Year == 1960
 data13s <- datasheet$Year == 2013
 r60 <- datasheet[data60s, ]
 r13 <- datasheet[data13s, ]
 
-
+#nuevo data frame filtrado
 year60 <- merge(r60, DFInfo[,-c(3)], by.x = "Country.Code", by.y = "Country")
 year13 <- merge(r13, DFInfo[,-c(2)], by.x = "Country.Code", by.y = "Country")
