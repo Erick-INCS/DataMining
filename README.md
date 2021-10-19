@@ -12,4 +12,4 @@ This repository contains a series of practices and exersices about data mining w
 
     [Practice 4](unit-1/practice4.R)
 
-    [Evaluative practice](unit-1/PracticaEvaluatoriaU1.R)
+    [Evaluative practice](https://github.com/Erick-INCS/DataMining/blob/unit1/unit-1/PracticaEvaluatoriaU1.R)
