@@ -60,19 +60,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 Erick Arroyo - erick.arroyo17@tectijuana.edu.mx
 Kathy Ramos - kathy.ramos17@tectijuana.edu.mx
 
-**Unit 1**
-
-[Practice 1](https://github.com/Erick-INCS/DataMining/blob/unit1/unit-1/law_of_large_numbers.R)
-
-[Practice 2](https://github.com/Erick-INCS/DataMining/blob/unit1/unit-1/r_functions.Runit-1/r_functions.R)
-
-[Practice 3](https://github.com/Erick-INCS/DataMining/blob/unit1/unit-1/practice3.R)
-
-[Practice 4](https://github.com/Erick-INCS/DataMining/blob/unit1/unit-1/practice4.R)
-
-[Evaluative practice](https://github.com/Erick-INCS/DataMining/blob/unit1/unit-1/PracticaEvaluatoriaU1.R)
-
-
 [contributors-shield]: https://img.shields.io/github/contributors/Erick-INCS/DataMining.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Erick-INCS/DataMining/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Erick-INCS/DataMining.svg?style=for-the-badge
