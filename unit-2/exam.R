@@ -29,7 +29,7 @@ plot +
   xlab("Genre")+
   ylab("Gross % us")+
   ggtitle("Domestic Gross % by Genre")+
-  theme(axis.title.x = element_text(family = "Comic Sans MS", color = "Purple", size = 12),
-        axis.title.y = element_text(family = "Comic Sans MS", color = "Purple", size = 12),
+  theme(axis.title.x = element_text(family = "Comic Sans MS", color = "Purple", size = 15),
+        axis.title.y = element_text(family = "Comic Sans MS", color = "Purple", size = 1),
         legend.justification = c(1,1),
-        plot.title = element_text(family = "Comic Sans MS", color = "Black", size = 15, hjust=0.5))
+        plot.title = element_text(family = "Comic Sans MS", color = "Black", size = 18, hjust=0.5))
