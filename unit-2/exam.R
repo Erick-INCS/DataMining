@@ -9,7 +9,7 @@ font_import()
 df <- read.csv('https://raw.githubusercontent.com/jcromerohdz/DataMining/master/Datasets/Project-Data.csv')
 
 
-# df[
+# df
 df <- df[which(df$Genre=="action"|df$Genre=="adventure"|
                df$Genre=="animation"|df$Genre=="comedy"|
                df$Genre=="drama"),]
@@ -26,8 +26,8 @@ plot <- ggplot(df, aes(x=Genre, y=Gross...US))+
   geom_boxplot(size=0.5, alpha=0.7, outlier.shape = NA)
 
 plot + 
-  xlab("Genre")+
-  ylab("Gross % us")+
+  xlab("Genre") +
+  ylab("Gross % us") +
   ggtitle("Domestic Gross % by Genre")+
   theme(axis.title.x = element_text(family = "Comic Sans MS", color = "Purple", size = 15),
         axis.title.y = element_text(family = "Comic Sans MS", color = "Purple", size = 1),
