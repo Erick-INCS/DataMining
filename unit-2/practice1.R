@@ -1,18 +1,19 @@
 # setwd('/HDD/Code/R/DataMining/unit-2')
 
-
+#Installation of libraries
 library(ggplot2)
 # install.packages('reshape2')
 library(reshape2)
 library(dplyr)
 
+#create dataframe, choosing file from PC files
 df <- read.csv(file = file.choose())
 
 # Relation between eating disorders and depression
-ggplot(df, aes(x = Eating.disorders, y = Depression)) + 
-  geom_point(colour='darkseagreen') + theme_grey() +
-  ggtitle("Relation Eating disorders vs Depression") +
-  theme(axis.line = element_line(size = 3, colour = "grey80"),
+ggplot(df, aes(x = Eating.disorders, y = Depression)) + #Asisgment of variables in axis on each axis
+  geom_point(colour='darkseagreen') + theme_grey() + #style of the points
+  ggtitle("Relation Eating disorders vs Depression") + #title
+  theme(axis.line = element_line(size = 3, colour = "grey80"), #theme customization
         panel.border = element_rect(linetype = "dashed", fill = NA))
 
 
