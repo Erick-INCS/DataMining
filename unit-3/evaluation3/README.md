@@ -1,4 +1,8 @@
 ## Evaluation unit 3 - Naive Bayes
+Naive Bayes algorithm is a classification algorithm based on Bayes' theorems, and can be used for both exploratory and predictive modeling. The name Naïve Bayes derives from the fact that the algorithm uses Bayesian techniques but does not take into account dependencies that may exist.
+
+This algorithm is useful for quickly generating mining models to discover relationships between input columns and predictable columns.
+
 
 Load required libraries
 ```R
