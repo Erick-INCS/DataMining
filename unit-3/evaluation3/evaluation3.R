@@ -1,46 +1,39 @@
-install.packages ("ElemStatLearn")
+# Required libraries
 library(caTools)
 library(e1071)
 library(caret)
-library(dplyr)
 library(ggplot2)
 library(scales)
+library(caTools)
 
 # Importing the dataset
 dataset = read.csv(file = file.choose())
 dataset = dataset[3:5]
-
 dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
 
-#install.packages('caTools')
-library(caTools)
+# Split into training and testing
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.75)
 training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
-
+# Scaling numeric features
 training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 
-library(e1071)
+# Create the classifier
 classifier = naiveBayes(formula = Purchased ~ .,
                         data = training_set,
                         type = 'C-classification',
                         kernel = 'linear')
 
-naiveBayes
-#prediction
+# Predictions
 y_pred=predict(classifier, newdata = test_set[-3])
 
 y_pred
-#matrix
-cm = table(test_set[, 3], y_pred)
-cm
 
-
-
-cm = confusionMatrix(as.factor(test_set$Purchased), y_pred)
+# Confusion matrix
+cm <- confusionMatrix(as.factor(test_set$Purchased), y_pred)
 
 ggplotConfusionMatrix <- function(m){
   mytitle <- paste("Accuracy", percent_format()(m$overall[1]),
