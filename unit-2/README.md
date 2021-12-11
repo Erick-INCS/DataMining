@@ -44,3 +44,4 @@ plot +
         legend.justification = c(1,1),
         plot.title = element_text(family = "Comic Sans MS", color = "Black", size = 18, hjust=0.5))
 ```
+![Domestic Gross by genre](plots/Domestic%20Gross_by_genre.png)
