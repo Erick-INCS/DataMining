@@ -51,6 +51,8 @@ ggplotConfusionMatrix <- function(m){
 
 ggplotConfusionMatrix(cm)
 
+# -------------
+
 
 # Train and test
 set = training_set
@@ -58,7 +60,7 @@ X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
 X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
 grid_set = expand.grid(X1, X2)
 colnames(grid_set) = c('Age', 'EstimatedSalary')
-y_grid = predict(model, newdata = grid_set)
+y_grid = predict(classifier, newdata = grid_set)
 plot(set[, -3],
      main = 'Naive Bayes (Training set)',
      xlab = 'Age', ylab = 'Estimated Salary',
