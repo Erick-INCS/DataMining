@@ -5,6 +5,8 @@ dataset = dataset[1:4]
 sepal_dataset=dataset[1:2]
 petal_dataset=dataset[3:4]
 
+# -----
+
 # Using the elbow method to find the optimal number of clusters
 set.seed(15)
 wcss = vector()
@@ -18,7 +20,7 @@ plot(
   ylab = 'WCSS'
 )
 
-
+# -----
 
 # Getting the clusters in the petal data
 petal_kmeans = kmeans(x = petal_dataset, centers = 3, iter=1)
@@ -26,6 +28,7 @@ petal_clusters = petal_kmeans$cluster
 # Visualising the clusters using petal data
 # install.packages('cluster')
 library(cluster)
+
 clusplot(
   petal_dataset,
   petal_clusters,
@@ -39,8 +42,6 @@ clusplot(
   xlab = 'Petal length',
   ylab = 'Petal witdth'
 )
-
-
 
 # getting the clusters in the sepal data
 sepal_kmeans = kmeans(x = sepal_dataset, centers = 3)
@@ -61,8 +62,6 @@ clusplot(sepal_dataset,
   xlab = 'Sepal length',
   ylab = 'Sepal witdth'
 )
-
-
 
 # Getting the clusters in all the data
 kmeans = kmeans(x = dataset, centers = 3)
