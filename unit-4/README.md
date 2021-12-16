@@ -30,6 +30,7 @@ plot(
   ylab = 'WCSS'
 )
 ```
+![./plots/elbow.png](./plots/elbow.png)
 
 Getting the clusters in the petal data
 ```R
@@ -55,6 +56,7 @@ clusplot(
   ylab = 'Petal witdth'
 )
 ```
+![./plots/clusters_of_petal_iris.png](./plots/clusters_of_petal_iris.png)
 
 Getting the clusters in the sepal data
 ```R
@@ -80,6 +82,7 @@ clusplot(sepal_dataset,
   ylab = 'Sepal witdth'
 )
 ```
+![./plots/cluster_sepal.png](./plots/cluster_sepal.png)
 
 Getting the clusters in all the data
 ```R
@@ -106,3 +109,4 @@ clusplot(
   ylab = 'y label'
 )
 ```
+![./plots/cluster_iris.png](./plots/cluster_iris.png)
